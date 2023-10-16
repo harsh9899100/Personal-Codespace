@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Personal Codespace</title>
+	<link rel="stylesheet" href="PCS.CSS">
+
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<a href="#" class="logo">Personal Codespace</a>
+					</div>
+					<div class="col text-right">
+						<!-- <button class="btn btn-header">Sign In</button> -->
+						<a href="#signup-signin" class="btn btn-header">Profile</a>
+
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!-- <section class="hero">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<h1>Organize Your Coding Ideas</h1>
+						<p>With Personal Codespace, you can easily store and manage your coding ideas in one place.</p>
+						<button id="get-started-btn" class="btn btn-primary">Get Started</button><br>
+						<img src="coding-icon.png" alt="coding-icon" srcset="" style="height: 50%;">
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<section class="hero">
+			<div class="container">
+				<div class="row">
+					<div class="left-hero">
+						<div class="col text-center">
+							<h1>Organize Your Coding Ideas</h1>
+							<p>With Personal Codespace, you can easily store and manage your coding ideas in one place.
+							</p>
+							<!-- <button id="get-started-btn" class="btn btn-primary">Get Started</button><br> -->
+							<a href="#signup-signin" class="btn btn-primary">Let's Start</a>
+						</div>
+					</div>
+					<div class="right-hero">
+						<img src="coding-icon.png" alt="coding-icon" srcset="" style="height: 50%;">
+					</div>
+				</div>
+		</section>
+
+
+		<section class="features">
+
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2>Features</h2>
+						<ul>
+							<li>Store and organize coding ideas</li>
+							<li>Add notes and descriptions to your ideas</li>
+							<li>Categorize ideas with tags</li>
+							<li>Search and filter ideas by tags, keywords, and more</li>
+							<li>Collaborate with others by sharing your ideas</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="signup-steps" style="margin: 50px 0px;">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2>What you need to do ?</h2>
+						<ul>
+							<li>Go to the sign-up Section</li>
+							<li>Enter your username, email address, and password (Please remember you password)</li>
+							<li>Review the terms of service and privacy policy</li>
+							<li>Click the "Sign up" button</li>
+							<li>Congratulations you are logged-in into the code world :)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="code-space-developer" style="margin: 50px 0px;">
+			<div class="container">
+				<div class="row">
+					<div class="left-code-space-developer">
+						<h2>Harsh Patel</h2>
+						<p>The Developer of the site.</p>
+						<p><a href="https://github.com/harsh9899100">🔗 Github profile</a></p>
+						<p><a href="https://github.com/harsh9899100">🔗 LinkedIN profile</a></p>
+					</div>
+					<div class="right-code-space-developer">
+						<img src="HARSH.jpg" alt="Developer.png" srcset="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="signup-signin" id="signup-signin">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="left-content">
+							<h2>Personal Codespace</h2>
+							<p>Organize your coding ideas with us!</p>
+							<button class="btn btn-primary" id="signupBtn">Sign Up</button>
+							<button class="btn btn-primary" id="signinBtn">Sign In</button>
+						</div>
+					</div>
+					<div class="col">
+						<div id="signupForm">
+							<h2>Sign Up</h2> <br>
+							<form>
+								<div class="form-group">
+									<label for="name">Name:</label>
+									<input type="text" id="name" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="email">Email:</label>
+									<input type="email" id="email" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="password">Password:</label>
+									<input type="password" id="password" class="form-control" required>
+								</div>
+								<button type="submit" class="btn btn-form">Sign Up</button>
+							</form>
+						</div>
+
+						<div id="signinForm" class="hidden">
+							<h2>Sign In</h2> <br>
+							<form>
+								<div class="form-group">
+									<label for="emailSignIn">Email:</label>
+									<input type="email" id="emailSignIn" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label for="passwordSignIn">Password:</label>
+									<input type="password" id="passwordSignIn" class="form-control" required>
+								</div>
+								<button type="submit" class="btn btn-form">Sign In</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+
+			// JS code for Redirecting in single page
+			const signinBtnRedirect = document.querySelector('#signinBtn');
+			signinBtnRedirect.addEventListener('click', function () {
+				const signupSigninSection = document.querySelector('.signup-signin');
+				signupSigninSection.scrollIntoView();
+			});
+
+
+			// JavaScript for toggling forms
+
+			// Get the buttons and forms by their IDs
+			const signupBtn = document.getElementById('signupBtn');
+			const signinBtn = document.getElementById('signinBtn');
+			const signupForm = document.getElementById('signupForm');
+			const signinForm = document.getElementById('signinForm');
+
+			// Adding event listeners to the buttons
+			signupBtn.addEventListener('click', () => {
+				signupForm.classList.remove('hidden');
+				signinForm.classList.add('hidden');
+			});
+
+			signinBtn.addEventListener('click', () => {
+				signupForm.classList.add('hidden');
+				signinForm.classList.remove('hidden');
+			});
+		</script>
+
+
+		<section class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<p>&copy; 2023 Personal Codespace. All rights reserved.</p>
+						<p>Designed And Developed By Harsh Patel. </p>
+						<p><span style="text-decoration:none;color: black;">harsh9899100@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+</html>
